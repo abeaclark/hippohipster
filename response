@@ -1,0 +1,31 @@
+#<SoundCloud::HashResponseWrapper
+avatar_url="https://i1.sndcdn.com/avatars-000197385825-5zte7s-large.jpg"
+city=nil
+country=nil
+description=nil
+discogs_name=nil
+first_name="Abe"
+followers_count=1
+followings_count=10
+full_name="Abe Clark"
+id=173897769
+kind="user"
+last_modified="2016/01/05 15:51:41 +0000" last_name="Clark" locale=""
+myspace_name=nil
+online=false
+permalink="abe-clark-822391902"
+permalink_url="http://soundcloud.com/abe-clark-822391902"
+plan="Free"
+playlist_count=1
+primary_email_confirmed=true
+private_playlists_count=0
+private_tracks_count=0
+public_favorites_count=6
+quota=#<SoundCloud::HashResponseWrapper unlimited_upload_quota=false upload_seconds_left=10800
+upload_seconds_used=0>
+subscriptions=[]
+track_count=0
+upload_seconds_left=10800
+uri="https://api.soundcloud.com/users/173897769" username="Abe Clark"
+website=nil
+website_title=nil>
