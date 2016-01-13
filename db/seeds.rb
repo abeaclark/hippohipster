@@ -1,20 +1,25 @@
-require 'faker'
 
-# create users
+tags_and_identifiers = {
+      punk: ['punk'],
+      rap: ['rap'],
+      hiphop: ['hip', 'hop'],
+      edm: ['electronic', 'edm', 'house'],
+      classical: ['classical', 'instrumental'],
+      indie: ['independent', 'indie'],
+      rock: ['rock'],
+      jazz: ['jazz', 'smooth']
+      }
 
+tags_and_identifiers.each do |key, value|
 
+  tag = Tag.create!({
+      value: key.to_s
+    })
 
-# 10.times do
-#   first_name = Faker::Name.first_name
-#   random_number_string = rand(1000).to_s
+  value.each do |identifier|
+    tag.identifiers << Identifier.create!({
+          value: identifier
+          })
+  end
 
-#   user = User.create({
-#     first_name: first_name,
-#     last_name: Faker::Name.last_name,
-#     email: Faker::Internet.email,
-#     password: 'password',
-#     username: first_name + random_number_string
-#     })
-
-# end
-
+end

@@ -1,4 +1,8 @@
+require 'uri'
+require 'json'
+
 module Player
+
   def client_id
     ENV['CLIENT_ID']
   end
@@ -28,10 +32,5 @@ module Player
                     :redirect_uri => redirect_uri
                     })
   end
-
-  def self.search_name()
-
-  end
-
 
 end

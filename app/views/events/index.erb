@@ -1,0 +1,17 @@
+<h1> Upcoming Events </h1>
+
+<%= @metro_area%>
+<hr>
+<% @upcoming_events.each do |event|%>
+<p>id: <%= event["performance"][0]["artist"]['id']%> </p>
+<p><%= event["performance"][0]["displayName"] %> </p>
+<p>Venue: <%= event["venue"]["displayName"] %> </p>
+<p><%= event["start"]["date"] %> </p>
+<p><%= event["start"]["time"] %> </p>
+
+<hr>
+<% end %>
+
+
+
+

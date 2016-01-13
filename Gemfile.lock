@@ -103,6 +103,7 @@ DEPENDENCIES
   capybara
   factory_girl
   faker
+  httparty
   pg
   rack-test
   rake

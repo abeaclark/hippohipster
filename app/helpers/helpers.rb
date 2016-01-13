@@ -12,6 +12,10 @@ helpers do
     end
   end
 
+  def genres
+    ENV['genres']
+  end
+
 # NOT WORKING??
   # def current_user=(user)
   #   session[:user_id] = user.id

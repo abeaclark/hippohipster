@@ -1,0 +1,24 @@
+<h1> Search result </h1>
+<h3>Search Parameter: <%= @search_parameter %></h3>
+<img src="<%= @extended_result['avatar_url'] %>" >
+<p>Username: <%= @result['username'] %></p>
+<p>Track count: <%= @result['track_count'] %></p>
+
+<p>Description: <%= @extended_result['description'] %></p>
+<p>Hometown: <%= @extended_result['city'] %></p>
+
+<p>All tags: <%= Organize.aggregate_user_tags(@user_id) %></p>
+
+<hr>
+
+<% @tracks.each do |track| %>
+<img src="<%= track['artwork_url'] %>"</p>
+<p>Title: <%= track['title'] %></p>
+<p>Plays: <%= track['playback_count'] %></p>
+<p>Tags: <%= track['tag_list'].gsub(/[^\w\s]/,"").split(" ") %></p>
+<p>Genre: <%= track['genre'] %></p>
+
+<% end %>
+<p>Tracks: <%= @tracks %></p>
+
+
