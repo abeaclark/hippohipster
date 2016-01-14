@@ -15,8 +15,14 @@ put '/users/:id' do
     email: params[:email],
     password: params[:password]
     })
-
+  set_error('Your information has been saved. Enjoy listening!')
   redirect '/player'
+end
+
+get '/logout' do
+  logout
+  set_error('You have been logged out')
+  redirect '/'
 end
 
 

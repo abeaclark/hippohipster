@@ -7,6 +7,8 @@ def client_secret
 end
 
 get '/oauth' do
+  current_user
+  redirect '/player' if @current_user
   client = Player.initiate_client_with_secret_and_redirect('http://localhost:9393/callback')
   redirect client.authorize_url()
 

@@ -85,4 +85,25 @@ module Organize
       end
     end
   end
+
+  ## input array of tag values and array of performer objects)
+  ## output array of performers who match the criteria
+  def self.performers_who_match_tags(array_of_tag_values, local_performers)
+    tags = find_tags_by_value(array_of_tag_values)
+    targeted_performers = []
+    local_performers.each do |performer|
+      targeted_performers << performer if (performer.tags && tags]
+    end
+    targeted_performers
+  end
+
+  private
+  def find_tags_by_value(array_of_tag_values)
+    tags = []
+    array_of_tag_values.each do |value|
+      tags << Tag.find_by(value: value)
+    end
+    tags
+  end
+
 end
